@@ -1,0 +1,409 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7ECE78B4285DC07D00EB3AD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ECE78B3285DC07D00EB3AD6 /* Assets.xcassets */; };
+		FFFA45F0A955F0F37D34FE67 /* Pods_mdi_Creator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D8E4C5890DBA83E040000D /* Pods_mdi_Creator.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		38D8E4C5890DBA83E040000D /* Pods_mdi_Creator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mdi_Creator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ECE78AC285DBE4700EB3AD6 /* mdi_Creator.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mdi_Creator.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ECE78B3285DC07D00EB3AD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7ECE78B7285DCE2B00EB3AD6 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		7ECE78B9285DD7B600EB3AD6 /* ab-testing.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ab-testing.svg"; sourceTree = "<group>"; };
+		7ECE78BA285DD7B700EB3AD6 /* abacus.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = abacus.svg; sourceTree = "<group>"; };
+		7ECE78BD285DF64F00EB3AD6 /* mdi_assets_swift.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mdi_assets_swift.stencil; sourceTree = "<group>"; };
+		EB28CDE135D2A6DCE0274725 /* Pods-mdi_Creator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mdi_Creator.debug.xcconfig"; path = "Target Support Files/Pods-mdi_Creator/Pods-mdi_Creator.debug.xcconfig"; sourceTree = "<group>"; };
+		F2DB2E99BB84CF62C808F218 /* Pods-mdi_Creator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mdi_Creator.release.xcconfig"; path = "Target Support Files/Pods-mdi_Creator/Pods-mdi_Creator.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC5750D908C28124EF99CB9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFFA45F0A955F0F37D34FE67 /* Pods_mdi_Creator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6712B8B9740986B68E271D18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38D8E4C5890DBA83E040000D /* Pods_mdi_Creator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7ECE78A3285DBE4600EB3AD6 = {
+			isa = PBXGroup;
+			children = (
+				7ECE78BD285DF64F00EB3AD6 /* mdi_assets_swift.stencil */,
+				7ECE78B8285DD7A900EB3AD6 /* testimages */,
+				7ECE78B7285DCE2B00EB3AD6 /* Contents.json */,
+				7ECE78B3285DC07D00EB3AD6 /* Assets.xcassets */,
+				7ECE78AD285DBE4700EB3AD6 /* Products */,
+				E95166EC60D960113A08692D /* Pods */,
+				6712B8B9740986B68E271D18 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7ECE78AD285DBE4700EB3AD6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7ECE78AC285DBE4700EB3AD6 /* mdi_Creator.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7ECE78B8285DD7A900EB3AD6 /* testimages */ = {
+			isa = PBXGroup;
+			children = (
+				7ECE78B9285DD7B600EB3AD6 /* ab-testing.svg */,
+				7ECE78BA285DD7B700EB3AD6 /* abacus.svg */,
+			);
+			path = testimages;
+			sourceTree = "<group>";
+		};
+		E95166EC60D960113A08692D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB28CDE135D2A6DCE0274725 /* Pods-mdi_Creator.debug.xcconfig */,
+				F2DB2E99BB84CF62C808F218 /* Pods-mdi_Creator.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Example/Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7ECE78AB285DBE4700EB3AD6 /* mdi_Creator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7ECE78B0285DBE4700EB3AD6 /* Build configuration list for PBXNativeTarget "mdi_Creator" */;
+			buildPhases = (
+				BD5CC00575FEE5FD38436B58 /* [CP] Check Pods Manifest.lock */,
+				7ECE78B6285DCD2000EB3AD6 /* copy svg's to Assets.xcasset */,
+				7ECE78BB285DF5A000EB3AD6 /* SwiftGen */,
+				7ECE78AA285DBE4700EB3AD6 /* Resources */,
+				DC5750D908C28124EF99CB9F /* Frameworks */,
+				7ECE78B5285DC3F100EB3AD6 /* copy bundle to development pod */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mdi_Creator;
+			productName = mdi_Creator;
+			productReference = 7ECE78AC285DBE4700EB3AD6 /* mdi_Creator.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7ECE78A4285DBE4600EB3AD6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					7ECE78AB285DBE4700EB3AD6 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 7ECE78A7285DBE4600EB3AD6 /* Build configuration list for PBXProject "mdi_Creator" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7ECE78A3285DBE4600EB3AD6;
+			productRefGroup = 7ECE78AD285DBE4700EB3AD6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7ECE78AB285DBE4700EB3AD6 /* mdi_Creator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7ECE78AA285DBE4700EB3AD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ECE78B4285DC07D00EB3AD6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7ECE78B5285DC3F100EB3AD6 /* copy bundle to development pod */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "copy bundle to development pod";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SOURCE=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.bundle\"\nDESTINATION=\"${SRCROOT}/../mdi/Assets\"\n\nrm -rf \"${DESTINATION}/mdi_Creator.bundle\"\ncp -rf \"${SOURCE}\" \"${DESTINATION}\"\nmv \"${DESTINATION}/mdi_Creator.bundle\" \"${DESTINATION}/mdi_Creator.bundle\"\n\nSWIFTSOURCE=\"$PROJECT_DIR/MDI.swift\"\nSWIFTDESTINATION=\"${SRCROOT}/../mdi/Classes/MDI.swift\"\n\ncp -f \"$SWIFTSOURCE\" \"$SWIFTDESTINATION\"\n";
+		};
+		7ECE78B6285DCD2000EB3AD6 /* copy svg's to Assets.xcasset */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "copy svg's to Assets.xcasset";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SOURCEDIR=${SRCROOT}/../MaterialDesign/svg/*\n#SOURCEDIR=${SRCROOT}/testimages/*\n\nDESTINATION=${SRCROOT}/Assets.xcassets/\n\nfind ${DESTINATION} -mindepth 1 -maxdepth 1 -type d | xargs rm -rf\n\nJSON=${SRCROOT}/Contents.json\n\nfor file in $SOURCEDIR; do\n\n    filename=$(basename \"$file\" .svg)\n    newfolder=\"${DESTINATION}/${filename}.imageset\"\n    mkdir \"${newfolder}\"\n    cat \"${JSON}\" | sed \"s|#filename#|${filename}.svg|g\" > \"${newfolder}/Contents.json\"\n    newfilepath=\"${newfolder}/${filename}.svg\"\n    cp \"${file}\" \"${newfilepath}\"    \ndone\n";
+		};
+		7ECE78BB285DF5A000EB3AD6 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"$PODS_ROOT\"/SwiftGen/bin/swiftgen run xcassets -p \"$PROJECT_DIR/mdi_assets_swift.stencil\" \"$PROJECT_DIR/assets.xcassets\" --output \"$PROJECT_DIR/MDI.swift\"\n  \nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
+		};
+		BD5CC00575FEE5FD38436B58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mdi_Creator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7ECE78AE285DBE4700EB3AD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7ECE78AF285DBE4700EB3AD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7ECE78B1285DBE4700EB3AD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB28CDE135D2A6DCE0274725 /* Pods-mdi_Creator.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PYSVANQAV7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.appcentric.mdi-Creator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		7ECE78B2285DBE4700EB3AD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2DB2E99BB84CF62C808F218 /* Pods-mdi_Creator.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PYSVANQAV7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.appcentric.mdi-Creator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7ECE78A7285DBE4600EB3AD6 /* Build configuration list for PBXProject "mdi_Creator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7ECE78AE285DBE4700EB3AD6 /* Debug */,
+				7ECE78AF285DBE4700EB3AD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7ECE78B0285DBE4700EB3AD6 /* Build configuration list for PBXNativeTarget "mdi_Creator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7ECE78B1285DBE4700EB3AD6 /* Debug */,
+				7ECE78B2285DBE4700EB3AD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7ECE78A4285DBE4600EB3AD6 /* Project object */;
+}

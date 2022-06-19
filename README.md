@@ -1,9 +1,15 @@
 # mdi
 
-[![CI Status](https://img.shields.io/travis/mkoorn/mdi.svg?style=flat)](https://travis-ci.org/mkoorn/mdi)
-[![Version](https://img.shields.io/cocoapods/v/mdi.svg?style=flat)](https://cocoapods.org/pods/mdi)
 [![License](https://img.shields.io/cocoapods/l/mdi.svg?style=flat)](https://cocoapods.org/pods/mdi)
-[![Platform](https://img.shields.io/cocoapods/p/mdi.svg?style=flat)](https://cocoapods.org/pods/mdi)
+
+Pod to use icons from [materialdesignicons.com][https://materialdesignicons.com/] without having to compile assets.
+
+```
+import mdi
+
+let abTestingImage = MDIAsset.abTesting.icon
+let abacusImage = MDIAsset.icon(named: "abacus")
+```
 
 ## Example
 
@@ -20,10 +26,10 @@ it, simply add the following line to your Podfile:
 pod 'mdi'
 ```
 
-## Author
+## Support
 
-mkoorn, mkoorn@appcentric.nl
+don't hold your breath 😀
 
 ## License
 
-mdi is available under the MIT license. See the LICENSE file for more info.
+idk, I guess the licence of [MaterialsDesign][https://github.com/Templarian/MaterialDesign] is leading.

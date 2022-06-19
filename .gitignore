@@ -1,6 +1,8 @@
 # macOS
 .DS_Store
 
+mdi_Creator/Assets.xcassets/*/*
+
 # Xcode
 build/
 *.pbxuser

@@ -1,0 +1,115 @@
+// swiftlint:disable all
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
+
+{% if catalogs %}
+{% set enumName %}{{param.enumName|default:"MDIAsset"}}{% endset %}
+{% set colorType %}{{param.colorTypeName|default:"MDIColorAsset"}}{% endset %}
+{% set dataType %}{{param.dataTypeName|default:"MDIDataAsset"}}{% endset %}
+{% set imageType %}{{param.imageTypeName|default:"MDIImageAsset"}}{% endset %}
+{% set colorAlias %}{{param.colorAliasName|default:"MDIAssetColorTypeAlias"}}{% endset %}
+{% set imageAlias %}{{param.imageAliasName|default:"MDIAssetImageTypeAlias"}}{% endset %}
+{% set forceNamespaces %}{{param.forceProvidesNamespaces|default:"false"}}{% endset %}
+{% set accessModifier %}{% if param.publicAccess %}public{% else %}public{% endif %}{% endset %}
+#if os(OSX)
+import AppKit.NSImage
+{{accessModifier}} typealias {{colorAlias}} = NSColor
+{{accessModifier}} typealias {{imageAlias}} = NSImage
+#elseif os(iOS) || os(tvOS) || os(watchOS)
+import UIKit.UIImage
+{{accessModifier}} typealias {{colorAlias}} = UIColor
+{{accessModifier}} typealias {{imageAlias}} = UIImage
+#endif
+
+// swiftlint:disable superfluous_disable_command
+// swiftlint:disable file_length
+
+// MARK: - Asset Catalogs
+{% macro enumBlock assets %}
+    {% call casesBlock assets %}
+    {% if param.allValues %}
+
+    {{accessModifier}} static let allImages: [{{imageType}}] = [
+    {% filter indent:4 %}{% call allValuesBlock assets "image" "" %}{% endfilter %}
+    ]
+    // swiftlint:enable trailing_comma
+    {% endif %}
+{% endmacro %}
+{% macro casesBlock assets %}
+    {% for asset in assets %}
+        {% if asset.type == "image" %}
+    {{accessModifier}} static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = {{imageType}}(name: "{{asset.value}}")
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+// swiftlint:disable identifier_name line_length nesting type_body_length type_name
+{{accessModifier}} enum {{enumName}} {
+
+    public static func icon(named name: String) -> UIImage? {
+        let image = UIImage(named: name, in: {{imageType}}.bundle, compatibleWith: nil)
+        return image
+    }
+    
+  {% if catalogs.count > 1 %}
+  {% for catalog in catalogs %}
+  {{accessModifier}} enum {{catalog.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
+    {% filter indent:2 %}{% call enumBlock catalog.assets %}{% endfilter %}
+  }
+  {% endfor %}
+  {% else %}
+  {% call enumBlock catalogs.first.assets %}
+  {% endif %}
+}
+
+// swiftlint:enable identifier_name line_length nesting type_body_length type_name
+
+// MARK: - Implementation Details
+
+{{accessModifier}} struct {{imageType}} {
+
+    {{accessModifier}} fileprivate(set) var name: String
+    
+    public static let bundle: Bundle? = {
+        if let podBundlePath = Bundle(for: MDIBundleToken.self).path(forResource: "mdi", ofType: "bundle"),
+           let assetBundlePath = Bundle(path: podBundlePath)?.path(forResource: "mdi_Creator", ofType: "bundle")
+        {
+            return Bundle(path: assetBundlePath)
+        }
+        return nil
+    }()
+    
+    {{accessModifier}} var icon: {{imageAlias}} {
+        let bundle = {{imageType}}.bundle
+        #if os(iOS) || os(tvOS)
+        let image = {{imageAlias}}(named: name, in: bundle, compatibleWith: nil)
+        #elseif os(OSX)
+        let image = bundle.image(forResource: NSImage.Name(name))
+        #elseif os(watchOS)
+        let image = {{imageAlias}}(named: name)
+        #endif
+        guard let result = image else { fatalError("Unable to load image named \(name).") }
+        return result
+    }
+}
+
+{{accessModifier}} extension {{imageAlias}} {
+    @available(iOS 1.0, tvOS 1.0, watchOS 1.0, *)
+    @available(OSX, deprecated,
+               message: "This initializer is unsafe on macOS, please use the {{imageType}}.image property")
+    
+    convenience init!(asset: {{imageType}}) {
+        #if os(iOS) || os(tvOS)
+        let bundle = Bundle(for: MDIBundleToken.self)
+        self.init(named: asset.name, in: bundle, compatibleWith: nil)
+        #elseif os(OSX)
+        self.init(named: NSImage.Name(asset.name))
+        #elseif os(watchOS)
+        self.init(named: asset.name)
+        #endif
+    }
+}
+
+private final class MDIBundleToken {}
+{% else %}
+// No assets found
+{% endif %}

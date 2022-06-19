@@ -1,13 +1,18 @@
 use_frameworks!
-
 platform :ios, '9.0'
+workspace 'mdi'
+
+project 'mdi'
+project '../mdi_Creator/mdi_Creator'
+
 
 target 'mdi_Example' do
-  pod 'mdi', :path => '../'
+    project 'mdi'
+    pod 'mdi', :path => '../'
+end
 
-  target 'mdi_Tests' do
-    inherit! :search_paths
 
-    
-  end
+target 'mdi_Creator' do
+    project '../mdi_Creator/mdi_Creator'
+    pod 'SwiftGen', '~> 6.0'    
 end
