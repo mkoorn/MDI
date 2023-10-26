@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'mdi'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'Use Material design svg icons in an iOS project without having to compile the assets'
   s.homepage         = 'https://github.com/mkoorn/mdi'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }

@@ -7,26 +7,23 @@
 //
 
 import UIKit
-import mdi
+import SwiftUI
 
 class ViewController: UIViewController {
         
+    let controller = UIHostingController(rootView: IconTestView())
     override func viewDidLoad() {
         super.viewDidLoad()
+                
+        self.view.addSubview(self.controller.view)
         
-        let abTestingImage = MDIAsset.abTesting.icon
-        let iconView1 = UIImageView(image: abTestingImage)
-        iconView1.tintColor = UIColor.blue
-        self.view.addSubview(iconView1)
-        iconView1.frame = CGRect(x: 50, y: 50, width: 100, height: 100)
-        
-        let abacusImage = MDIAsset.icon(named: "abacus")
-        let iconView2 = UIImageView(image: abacusImage)
-        iconView2.tintColor = UIColor.red
-        self.view.addSubview(iconView2)
-        iconView2.frame = CGRect(x: 200, y: 50, width: 100, height: 100)
+        self.controller.view.translatesAutoresizingMaskIntoConstraints = false
+        self.controller.view.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        self.controller.view.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+        self.controller.view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        self.controller.view.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
