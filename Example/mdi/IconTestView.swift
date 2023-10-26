@@ -13,18 +13,25 @@ struct IconTestView: View {
     var body: some View {
 
         ScrollView {
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 20) {
                 HStack {
                     Text("abTesting")
-                        .padding(.leading, 20)
                     Image(uiImage: MDIAsset.abTesting.icon)
                 }
                 HStack {
                     Text("abacus")
-                        .padding(.leading, 20)
                     Image(uiImage: MDIAsset.icon(named: "abacus")!)
                 }
+                
+                Text("MDI v7.3.67 - 26 October 2023")
+                    .font(Font.headline)
+                    .padding(.top, 20)
+                HStack {
+                    Text("account-file")
+                    Image(uiImage: MDIAsset.accountFile.icon)
+                }
             }
+            .padding(.leading, 20)
             .frame(maxWidth: .infinity,
                    maxHeight: .infinity,
                    alignment: .topLeading)
