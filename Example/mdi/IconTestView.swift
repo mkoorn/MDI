@@ -23,7 +23,7 @@ struct IconTestView: View {
                     Image(uiImage: MDIAsset.icon(named: "abacus")!)
                 }
                 
-                Text("MDI v7.3.67 - 26 October 2023")
+                Text("MDI \(MDIVersion.version) - \(MDIVersion.importDate)")
                     .font(Font.headline)
                     .padding(.top, 20)
                 HStack {
