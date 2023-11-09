@@ -12,6 +12,7 @@ import SwiftUI
 class ViewController: UIViewController {
         
     let controller = UIHostingController(rootView: IconTestView())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
                 
