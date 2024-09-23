@@ -65,7 +65,7 @@ import UIKit.UIImage
 
 // MARK: - Implementation Details
 
-{{accessModifier}} struct {{imageType}} {
+{{accessModifier}} struct {{imageType}}: Sendable {
 
     {{accessModifier}} fileprivate(set) var name: String
     

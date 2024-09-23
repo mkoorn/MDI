@@ -7476,7 +7476,7 @@ public enum MDIAsset: Sendable {
 
 // MARK: - Implementation Details
 
-public struct MDIImageAsset {
+public struct MDIImageAsset: Sendable {
 
     public fileprivate(set) var name: String
     public static let bundle: Bundle? = {
