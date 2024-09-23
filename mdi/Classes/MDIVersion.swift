@@ -8,6 +8,6 @@
 import Foundation
 
 public enum MDIVersion {
-    public static let version = "v7.3.67"
-    public static let importDate = "26 October 2023"
+    public static let version = "v7.4.47"
+    public static let importDate = "23 September 2023"
 }

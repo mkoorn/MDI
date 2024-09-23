@@ -27,8 +27,8 @@ struct IconTestView: View {
                     .font(Font.headline)
                     .padding(.top, 20)
                 HStack {
-                    Text("account-file")
-                    Image(uiImage: MDIAsset.accountFile.icon)
+                    Text("account-box-edit-outline")
+                    Image(uiImage: MDIAsset.accountBoxEditOutline.icon)
                 }
             }
             .padding(.leading, 20)
