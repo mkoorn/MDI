@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/cocoapods/l/mdi.svg?style=flat)](https://cocoapods.org/pods/mdi)
 
-Version 0.2.0 - MDI v7.3.67
+Version 0.2.2 - MDI v7.4.47
 
 Pod to use icons from [materialdesignicons.com][https://materialdesignicons.com/] without having to compile assets.
 
