@@ -43,7 +43,7 @@ import UIKit.UIImage
 {% endmacro %}
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
-{{accessModifier}} enum {{enumName}} {
+{{accessModifier}} enum {{enumName}}: Sendable {
 
     public static func icon(named name: String) -> UIImage? {
         let image = UIImage(named: name, in: {{imageType}}.bundle, compatibleWith: nil)
